@@ -171,7 +171,7 @@
         <div class="modal fade" id="success" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content border-0">
-                    <div class="modal-header flex-column">
+                    <div class="modal-header flex-column" style="margin-top: -100px;">
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
 
@@ -192,6 +192,6 @@
     function delayMsg(){
         var suc = document.getElementById('success');
         suc.style.display = 'none';
-        setTimeout(suc, 150000);
+        setTimeout(suc, 1500000);
     }
 </script>
