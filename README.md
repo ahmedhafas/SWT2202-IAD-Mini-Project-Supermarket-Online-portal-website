@@ -183,3 +183,4 @@ Route::post('/contact_feedback', [UserControlller::class,'contact'])->name('cont
 ============================================================== THE END ============================================================================
 ==================================================================================================================================================="# SWT2202-IAD-Mini-Project-Supermarket-Online-portal-website" 
 "# SWT2202-IAD-Mini-Project-Supermarket-Online-portal-website" 
+"# SWT2202-IAD-Mini-Project-Supermarket-Online-portal-website" 
