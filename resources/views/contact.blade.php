@@ -192,6 +192,6 @@
     function delayMsg(){
         var suc = document.getElementById('success');
         suc.style.display = 'none';
-        setTimeout(suc, 1500000);
+        setTimeout(suc, 1900000);
     }
 </script>
