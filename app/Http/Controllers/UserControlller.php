@@ -84,7 +84,7 @@ class UserControlller extends Controller
         $res = $contact->save();
 
         if ($res) {
-            return ;
+            return back();
         }
     }
 
