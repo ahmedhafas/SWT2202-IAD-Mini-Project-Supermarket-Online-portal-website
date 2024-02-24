@@ -2,11 +2,11 @@
 @section('title', 'Little Grooo - Contact Page')
 @section('content')
 
-@if(Session::has('success'))
+<!-- @if(Session::has('success'))
     <span id="msg">
         {{ Session::get('success') }}
 </span>
-@endif
+@endif -->
         <main>
 
             <nav class="navbar navbar-expand-lg">
@@ -85,7 +85,7 @@
                         <div class="col-lg-6 col-12">
                             <h2 class="mb-4">Let's <span>begin</span></h2>
 
-                            <form class="contact-form me-lg-5 pe-lg-3" action="{{route('contactreg')}}" method="post" onsubmit="return toastMsg()">
+                            <form class="contact-form me-lg-5 pe-lg-3" action="{{route('contactreg')}}" method="post" onsubmit="return alertMsg()">
                                 @csrf
                                 <div class="form-floating">
                                     <input type="text" name="name" id="name" class="form-control" placeholder="Full name" required>
@@ -112,7 +112,7 @@
                                 </div>
 
                                 <div class="col-lg-5 col-6">
-                                    <button type="submit" class="btn custom-btn cart-btn" data-bs-toggle="modal" data-bs-target='#success'>Send</button>
+                                    <button type="submit" class="btn custom-btn cart-btn" id="liveToastBtn">Send</button>
                                 </div>
                             </form>                            
                         </div>
@@ -168,7 +168,7 @@
         </main>
 
         <!-- CARD MODAL to display the alert message when user submit or register form -->
-        <div class="modal fade" id="success" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- <div class="modal fade" id="success" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content border-0">
                     <div class="modal-header flex-column" style="margin-top: -100px;">
@@ -185,13 +185,32 @@
                 </div>
 
             </div>
+        </div> -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                <img src="..." class="rounded me-2" alt="...">
+                <strong class="me-auto">Bootstrap</strong>
+                <small>11 mins ago</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                Hello, world! This is a toast message.
+                </div>
+            </div>
         </div>
 @endsection
 
 <script>
-    function delayMsg(){
-        var suc = document.getElementById('success');
-        suc.style.display = 'none';
-        setTimeout(suc, 1900000);
+    function alertMsg() {
+        const toastTrigger = document.getElementById('liveToastBtn')
+        const toastLiveExample = document.getElementById('liveToast')
+
+        if (toastTrigger) {
+            const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+            toastTrigger.addEventListener('click', () => {
+                toastBootstrap.show()
+            })
+        }
     }
 </script>
