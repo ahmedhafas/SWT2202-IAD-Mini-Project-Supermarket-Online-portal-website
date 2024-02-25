@@ -455,7 +455,7 @@
 
                                     <div class="col-lg-12 col-12 mb-3">
                                         <label for="quantity" class="lab">Quantity</label>
-                                        <select class="form-select cart-form-select" id="q2" name="quantity">
+                                        <select class="form-select cart-form-select" id=-" name="quantity">
                                             <option></option>
                                             <option>1</option>
                                             <option>2</option>
