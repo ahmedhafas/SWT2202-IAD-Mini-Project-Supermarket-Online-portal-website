@@ -22,7 +22,7 @@
         <link rel="stylesheet" href="css/slick.css"/>
 
         <link href="css/tooplate-little-fashion.css" rel="stylesheet">
-        
+        <link rel="icon" href="images/little_grooo.ico" type="image/x-icon">
     </head>
     
     <body>

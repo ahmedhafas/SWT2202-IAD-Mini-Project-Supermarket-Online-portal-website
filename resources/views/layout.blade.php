@@ -23,6 +23,7 @@
 
         <link href="{{ asset('../css/tooplate-little-fashion.css') }}" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <link rel="icon" href="images/little_grooo.ico" type="image/x-icon">
     </head>
     
     <body>

@@ -22,12 +22,12 @@ Route::view('/','home')->name('home')->middleware('auth');
 Route::get('/about', function() {
     $users = DB::table('users')->get();
     return view('about', compact('users'));
-})->name('about');
+})->name('about')->middleware('auth');
 
 
-Route::view('/products','products')->name('products');
-Route::view('/faq', 'faq')->name('faq');
-Route::view('/contact', 'contact')->name('contact');
+Route::view('/products','products')->name('products')->middleware('auth');
+Route::view('/faq', 'faq')->name('faq')->middleware('auth');
+Route::view('/contact', 'contact')->name('contact')->middleware('auth');
 Route::view('/sign-in', 'sign-in')->name('sign-in');
 Route::view('/sign-up','sign-up')->name('sign-up');
 
