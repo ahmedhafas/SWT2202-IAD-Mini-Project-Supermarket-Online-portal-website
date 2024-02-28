@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>@yield('title', 'Little Home page')</title>
+        <title>@yield('title', 'Little Grooo - Home page')</title>
 
         <!-- CSS FILES -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
