@@ -48,7 +48,9 @@ class UserControlller extends Controller
         if (Auth::attempt($credentials))
         {
             $req->session()->regenerate();
-            return view('home');
+            return redirect()
+            ->route('home')
+            ->with('message','Sign-in successfully!!!');
         } else {
             return redirect()
             ->route('sign-in')

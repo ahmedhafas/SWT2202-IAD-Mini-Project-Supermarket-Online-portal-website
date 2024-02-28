@@ -25,7 +25,7 @@
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <link rel="icon" href="images/little_grooo.ico" type="image/x-icon">
     </head>
-    
+
     <body>
         <section class="preloader">
             <div class="spinner">
@@ -43,10 +43,6 @@
                     <a class="navbar-brand" href="{{route('home')}}">
                         <strong><span>Little</span> Grooo</strong>
                     </a>
-
-                    <div class="d-lg-none">
-                        <a href="{{route('sign-in')}}" class="bi-person custom-icon me-3"></a>
-                    </div>
 
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav mx-auto">
@@ -85,7 +81,6 @@
                     </div>
                 </div>
             </nav>
-
             <section class="slick-slideshow">   
                 <div class="slick-custom">
                     <img src="images/slideshow/medium-shot-business-women-high-five.jpeg" class="img-fluid" alt="">
