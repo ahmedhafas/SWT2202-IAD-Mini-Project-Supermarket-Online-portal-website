@@ -9,8 +9,7 @@
 
 ## Installation setup our project
 
-**<h3>According to the version of PHP and composer</h3>**
-<h4>Two different ways of setup here</h4>
+- <h4>Two different ways of setup here</h4>
 1.
 
 ## Database Details
