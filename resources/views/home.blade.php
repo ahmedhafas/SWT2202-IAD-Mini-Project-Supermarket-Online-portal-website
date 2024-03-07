@@ -25,7 +25,11 @@
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <link rel="icon" href="images/little_grooo.ico" type="image/x-icon">
     </head>
-
+    @if (session()->has('succeed'))
+        <div class="alert alert-success" style="font-weight: 900; font-size:larger; text-align:center; ">
+            {{ session()->get('succeed') }}
+        </div>
+    @endif
     <body>
         <section class="preloader">
             <div class="spinner">

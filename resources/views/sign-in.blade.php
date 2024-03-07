@@ -8,9 +8,9 @@
     </div>
 @endif
 
-@if (session()->has('wrong'))
+@if (Session::has('wrong'))
     <div class="alert alert-danger" style="font-weight: 900; font-size:larger; text-align:center; ">
-        {{ session()->get('wrong') }}
+        {{ Session::get('wrong') }}
     </div>
 @endif
 
@@ -38,6 +38,11 @@
                                             <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email address" required value="{{old('email')}}">
 
                                             <label for="email">Email address</label>
+                                            @if($errors->has('email'))
+                                                <span style="font-weight: 900; font-size:larger; text-align:center; ">
+                                                    <strong>{{$errors->first('email')}}</strong>
+                                                </span>
+                                            @endif
                                         </div>
 
                                         <div class="form-floating p-0">

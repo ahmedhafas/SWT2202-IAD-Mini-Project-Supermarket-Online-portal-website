@@ -15,7 +15,7 @@ class UserControlller extends Controller
 {
     public function sign_up(Request $req)
     {
-        $data = $req->validate([
+        $req->validate([
             'name' => 'required',
             'email' =>'required | email | unique:users',
             'password' => 'required | min:4',
@@ -24,7 +24,7 @@ class UserControlller extends Controller
             'position' =>'required',
             'bio' =>'required',
         ]);
-
+        $data = $req->all();
         $result = User::create($data);
         if ($result)
         {
@@ -42,7 +42,13 @@ class UserControlller extends Controller
     {
         $credentials = $req->validate([
             'email' =>'required | email',
-            'password' => 'required | min:4 | max:10'
+            'password' => 'required | min:4'
+        ],[
+            'email.required' => 'Email is required',
+            'email.email' => 'Email is not valid',
+            'email.unique' => 'Email is already taken',
+            'password.required' => 'Password is required',
+            'password.min' => 'Password must be at least 4 characters',
         ]);
 
         if (Auth::attempt($credentials))
@@ -50,11 +56,11 @@ class UserControlller extends Controller
             $req->session()->regenerate();
             return redirect()
             ->route('home')
-            ->with('message','Sign-in successfully!!!');
+            ->with('succeed','Sign-in successfully!!!');
         } else {
             return redirect()
             ->route('sign-in')
-            ->withWrong('Sign-in Failure!! Try Again!!! Check whether email & password');
+            ->with('wrong','Sign-in Failure!! Try Again!!! Check whether email & password');
         }
     }
 
