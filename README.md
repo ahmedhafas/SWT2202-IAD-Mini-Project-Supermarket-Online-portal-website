@@ -10,10 +10,12 @@
 ## Installation setup our project
 
 - <h4>Two different ways of setup here</h4>
-    <p>1. Open the laravel project in your local working space</p><br>
-    2. <p>Open the terminal in project directory</p><br>
-    3. <p>Enter this command</p><br>
-        <p align="justify" style="font-family: courier new; font-style: italic;">composer install</p>
+    <ol>
+    <li>Open the laravel project in your local working space</li>
+    <li>Open the terminal in project directory</li>
+    <li>Enter this command<p align="justify" style="font-family: courier new; font-style: italic;">composer install</p></li>
+    </ol>
+    
 
 ## Database Details
 Database name : little_grooo
